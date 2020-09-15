@@ -10,6 +10,48 @@ archivesBaseName = project.archives_base_name
 version = project.mod_version
 group = project.maven_group
 
+repositories {
+    mavenCentral()
+
+    maven {
+        name = 'spongepowered-repo'
+        url = 'https://repo.spongepowered.org/maven/'
+    }
+
+    maven {
+        url = 'https://jitpack.io'
+    }
+
+    maven {
+        url = 'https://repo.viaversion.com/'
+    }
+
+    maven {
+        url = 'https://oss.sonatype.org/content/repositories/snapshots'
+    }
+
+    maven {
+        url = 'https://maven.fabricmc.net/'
+    }
+
+    maven {
+        url = 'https://server.bbkr.space/artifactory/libs-snapshot'
+    }
+
+    maven {
+        url = 'https://server.bbkr.space/artifactory/libs-release'
+    }
+
+    maven {
+        url = 'https://maven.extracraftx.com'
+    }
+
+    maven {
+        url = 'http://maven.elmakers.com/repository'
+    }
+}
+
+
 dependencies {
 	//to change the versions see the gradle.properties file
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
@@ -21,6 +63,15 @@ dependencies {
 
 	// PSA: Some older mods, compiled on Loom 0.2.1, might have outdated Maven POMs.
 	// You may need to force-disable transitiveness on them.
+	    implementation "us.myles:viaversion:3.1.1"
+    implementation "net.md-5:bungeecord-chat:1.16-R0.2"
+    include "us.myles:viaversion:3.1.1"
+    include "org.yaml:snakeyaml:1.26"
+    include "net.md-5:bungeecord-chat:1.16-R0.2"
+        modImplementation 'io.github.cottonmc:cotton-client-commands:1.0.1+1.16-rc1'
+    include 'io.github.cottonmc:cotton-client-commands:1.0.1+1.16-rc1'
+    modImplementation 'com.github.ViaVersion:ViaFabric:build-464.1'
+    include 'com.github.ViaVersion:ViaFabric:build-464.1'
 }
 
 processResources {
