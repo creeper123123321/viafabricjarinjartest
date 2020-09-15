@@ -55,21 +55,17 @@ dependencies {
     minecraft "com.mojang:minecraft:1.16.2"
     mappings "net.fabricmc:yarn:1.16.2+build.19:v2"
     modImplementation "net.fabricmc:fabric-loader:0.9.1+build.205"
-    modImplementation "net.fabricmc.fabric-api:fabric-api:0.13.1+build.370-1.16"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:0.20.1+build.401-1.16"
     implementation "us.myles:viaversion:3.1.1"
-    implementation "net.md-5:bungeecord-chat:1.16-R0.2"
+    compile "net.md-5:bungeecord-chat:1.16-R0.4-SNAPSHOT"
     include "us.myles:viaversion:3.1.1"
     include "org.yaml:snakeyaml:1.26"
-    include "net.md-5:bungeecord-chat:1.16-R0.2"
     modImplementation 'com.github.Vatuu:discord-rpc:1.6.2'
     include 'com.github.Vatuu:discord-rpc:1.6.2'
-    implementation 'com.google.code.findbugs:jsr305:3.0.2'
     modImplementation 'io.github.cottonmc:cotton-client-commands:1.0.1+1.16-rc1'
     include 'io.github.cottonmc:cotton-client-commands:1.0.1+1.16-rc1'
     modImplementation 'com.github.ViaVersion:ViaFabric:build-464.1'
     include 'com.github.ViaVersion:ViaFabric:build-464.1'
-
-    testImplementation 'junit:junit:4.12'
 }
 
 processResources {
